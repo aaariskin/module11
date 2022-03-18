@@ -31,3 +31,13 @@ print('Задача 6. Метеостанция')
 # 20       68
 # 40       104
 # 50       122
+count = 1
+min_temp = int(input('Ввод:\nНижняя граница: '))
+max_temp = int(input('Верхняя граница: '))
+step_temp = int(input('Шаг: '))
+print('\nВывод:\nC\t\tF\n')
+
+for i in range(max_temp + 1):
+    if i == 0 or i == step_temp * (count - 1) or i == max_temp:
+        print(f'{min_temp+i}\t\t{round(32+(min_temp+i)*1.8)}')
+        count += 1
